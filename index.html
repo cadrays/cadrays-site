@@ -11,32 +11,37 @@ Welcome to CADRays site. It's the simple and easy to use renderer and CAD proces
 Overview
 ===============================================================================
 
-CADRays is fast GPU-accelerated, unbiased, physically correct renderer. It means that CADRays uses the graphics cards to render photo-realistic images really fast. And physical correctness allows to achieve stunning results faster, with minimum parameters to tweak.
+CADRays is fast GPU accelerated, unbiased physically-based renderer. It is based on OpenGL/GLSL industry standard, which means that GPU acceleration will work on both AMD and NVIDIA cards or even integrated GPUs. And physical correctness allows achieving stunning results faster, with minimum parameters to tweak.
 
 Efficiency
 -------------------------------------------------------------------------------
 
-CADRays uses highly optimized GPU Path tracing kernel and acceleration structures from OpenCASCADE.
+CADRays uses highly optimized GPU path tracing kernel and acceleration structures from open source OpenCASCADE CAD kernel.
 
 Interactivity
 -------------------------------------------------------------------------------
 
-CADRays' on-screen viewport is the final render. Any changes to the scene are instantly updated on the screen allowing you to tweak any setting and view the results immediately.
+CADRays' on-screen viewport is the *final* render. It provides immediate feedback for adjusting parameters of materials, light sources and camera. CADRays uses progressive rendering mode starting with a noisy image and then progressively refining it towards the final result. And, of course, you can stop the rendering at the point where you find the noise level acceptable.
 
 Materials
 -------------------------------------------------------------------------------
 
-Simple but robust 2-layer material system allows for variety of possible surfaces from glass and ceramic to sophisticated car paint.
+CADRays features simple but robust double layered material model allowing for most common material types such as glossy surfaces, glass, metal, or paint. You can mix different material properties in the desired proportions in order to create wide variety of realistic surfaces.
+
+Camera
+-------------------------------------------------------------------------------
+
+CADRays supports both perspective and orthographic camera models. The second one allows to render the scene without perspective effects which can be useful for technical and architectural visualization tasks.
 
 CAD oriented
 -------------------------------------------------------------------------------
 
-STEP, IGES, and BREP formats are supported out of the box as well as all modeling capabilities of OCCT with interactive TCL console.
+STEP, IGES, and BREP formats are supported out of the box as well as all modeling capabilities of OpenCASCADE with interactive TCL console.
 
 Mesh support
 -------------------------------------------------------------------------------
 
-Conventional triangulation formats such as OBJ, PLY, STL and such are supported.
+Conventional triangulation formats such as OBJ, PLY, STL are also supported. So you can combine CAD models and meshes in the single scene.
 
 Download
 ===============================================================================
@@ -46,7 +51,7 @@ CADRays is not released yet, but it will be available *for free* soon.
 Contacts
 ===============================================================================
 
-cadrays@gmail.com 
+cadrenderer@gmail.com
 
 <a class="twitter-follow-button"
   href="https://twitter.com/hb3p8"
